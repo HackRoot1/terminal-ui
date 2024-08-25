@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terminal UI</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="terminal">
+        <div class="header">
+            <div class="buttons">
+                <span class="close"></span>
+                <span class="minimize"></span>
+                <span class="maximize"></span>
+            </div>
+            <span class="title">Terminal</span>
+        </div>
+        <div class="content">
+            <p>Welcome to my website! Get started by typing <code>help</code> command below</p>
+            <div class="output"></div>
+            <div class="command-line">
+                <span class="prompt">$ saurabhdamale-dev >> </span>
+                <input type="text" id="commandInput" autofocus>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

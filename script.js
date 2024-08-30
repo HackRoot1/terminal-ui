@@ -22,7 +22,7 @@ commandInput.addEventListener("keydown", function (event) {
         }
 
         if (input === "clear") {
-            outputDiv.textContent = "<br>";
+            outputDiv.textContent = `<br>`;
         } else {
             outputDiv.innerHTML += `$ saurabhdamale-dev >> ${input}<br>${outputText}<br><br>`;
         }
@@ -67,19 +67,19 @@ commandInput.addEventListener("keydown", function (event) {
                 switch (error.code) {
                     case error.PERMISSION_DENIED:
                         outputDiv.innerHTML +=
-                            "User denied the request for Geolocation. <br /><br>";
+                            `User denied the request for Geolocation. <br /><br>`;
                         break;
                     case error.POSITION_UNAVAILABLE:
                         outputDiv.innerHTML +=
-                            "Location information is unavailable. <br /><br>";
+                            `Location information is unavailable. <br /><br>`;
                         break;
                     case error.TIMEOUT:
                         outputDiv.innerHTML +=
-                            "The request to get user location timed out. <br /><br>";
+                            `The request to get user location timed out. <br /><br>`;
                         break;
                     case error.UNKNOWN_ERROR:
                         outputDiv.innerHTML +=
-                            "An unknown error occurred. <br /><br>";
+                            `An unknown error occurred. <br /><br>`;
                         break;
                 }
             }

@@ -22,9 +22,9 @@ commandInput.addEventListener("keydown", function (event) {
         }
 
         if (input === "clear") {
-            outputDiv.textContent = "";
+            outputDiv.textContent = "<br>";
         } else {
-            outputDiv.innerHTML += `$ saurabhdamale-dev >> ${input}<br>${outputText}<br>`;
+            outputDiv.innerHTML += `$ saurabhdamale-dev >> ${input}<br>${outputText}<br><br>`;
         }
 
         if (input === "sign-in") {
@@ -54,12 +54,12 @@ commandInput.addEventListener("keydown", function (event) {
                     }
                 );
             } else {
-                outputDiv.innerHTML += `Geolocation is not supported by your browser.`;
+                outputDiv.innerHTML += `Geolocation is not supported by your browser.<br>`;
             }
 
             // Success callback function
             function successCallback(position) {
-                outputDiv.innerHTML += `Location found! <br />Latitude: ${position.coords.latitude} <br />Longitude: ${position.coords.longitude} <br />Accuracy: ${position.coords.accuracy}`;
+                outputDiv.innerHTML += `Location found! <br />Latitude: ${position.coords.latitude} <br />Longitude: ${position.coords.longitude} <br />Accuracy: ${position.coords.accuracy}<br>`;
             }
 
             // Error callback function
@@ -67,19 +67,19 @@ commandInput.addEventListener("keydown", function (event) {
                 switch (error.code) {
                     case error.PERMISSION_DENIED:
                         outputDiv.innerHTML +=
-                            "User denied the request for Geolocation. <br />";
+                            "User denied the request for Geolocation. <br /><br>";
                         break;
                     case error.POSITION_UNAVAILABLE:
                         outputDiv.innerHTML +=
-                            "Location information is unavailable. <br />";
+                            "Location information is unavailable. <br /><br>";
                         break;
                     case error.TIMEOUT:
                         outputDiv.innerHTML +=
-                            "The request to get user location timed out. <br />";
+                            "The request to get user location timed out. <br /><br>";
                         break;
                     case error.UNKNOWN_ERROR:
                         outputDiv.innerHTML +=
-                            "An unknown error occurred. <br />";
+                            "An unknown error occurred. <br /><br>";
                         break;
                 }
             }
